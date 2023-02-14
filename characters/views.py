@@ -1,6 +1,4 @@
 import random
-
-from django.shortcuts import render
 from drf_spectacular.utils import extend_schema, OpenApiParameter
 from rest_framework import status, generics
 from rest_framework.decorators import api_view
@@ -9,6 +7,7 @@ from rest_framework.response import Response
 
 from characters.models import Character
 from characters.serializers import CharacterSerializer
+
 
 @extend_schema(
     responses={status.HTTP_200_OK: CharacterSerializer}
